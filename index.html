@@ -8,26 +8,13 @@
 <style>
 body{
   margin:0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:linear-gradient(180deg,#ffd6e8,#ffeaf3);
   min-height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
   overflow:hidden;
-}
-
-/* ลูกโป่ง */
-.balloon{
-  position:absolute;
-  bottom:-120px;
-  font-size:40px;
-  animation:floatUp 10s linear infinite;
-  opacity:.7;
-}
-@keyframes floatUp{
-  from{transform:translateY(0);}
-  to{transform:translateY(-130vh);}
 }
 
 .envelope{
@@ -58,14 +45,27 @@ p{color:#444;line-height:1.9;font-size:15.5px;}
 
 .kitty-img{
   width:120px;
-  margin-bottom:10px;
   animation:float 3s ease-in-out infinite;
+  margin-bottom:10px;
+}
+
+.balloon{
+  position:absolute;
+  bottom:-100px;
+  font-size:40px;
+  animation:floatUp 8s linear infinite;
+  opacity:.7;
 }
 
 @keyframes float{
   0%{transform:translateY(0);}
   50%{transform:translateY(-10px);}
   100%{transform:translateY(0);}
+}
+
+@keyframes floatUp{
+  from{transform:translateY(0);}
+  to{transform:translateY(-120vh);}
 }
 </style>
 </head>
@@ -74,8 +74,8 @@ p{color:#444;line-height:1.9;font-size:15.5px;}
 
 <!-- ลูกโป่ง -->
 <div class="balloon" style="left:10%">🎈</div>
-<div class="balloon" style="left:40%;animation-delay:2s">🎈</div>
-<div class="balloon" style="left:70%;animation-delay:4s">🎈</div>
+<div class="balloon" style="left:50%;animation-delay:2s">🎈</div>
+<div class="balloon" style="left:80%;animation-delay:4s">🎈</div>
 
 <!-- STEP 1 -->
 <div class="envelope step" id="step1" style="display:block;">
@@ -86,28 +86,26 @@ p{color:#444;line-height:1.9;font-size:15.5px;}
 
 <!-- STEP 2 -->
 <div class="envelope step" id="step2">
-  <img src="./IMG_4357.png" class="kitty-img" alt="kitty">
+  <img src="IMG_4357.png" class="kitty-img" alt="kitty">
   <p>ต้องยิ้มก่อนน้าาถึงจาเปิดด้ายยย</p>
   <button onclick="nextStep(3)">ยิ้มแล้ว</button>
 </div>
 
 <!-- STEP 3 -->
 <div class="envelope step" id="step3">
-  <img src="./IMG_4361.png" class="kitty-img" alt="kitty">
   <p>อยากเปิดอ้ะยังง</p>
   <button onclick="nextStep(4)">พร้อมแล้ว</button>
 </div>
 
 <!-- STEP 4 -->
 <div class="envelope step" id="step4">
-  <img src="./IMG_4362.png" class="kitty-img" alt="kitty">
   <h1>จะเปิดแล้วน้าาาา</h1>
   <button onclick="nextStep(5)">เปิดจดหมาย</button>
 </div>
 
 <!-- STEP 5 -->
 <div class="envelope step" id="step5">
-  <img src="./IMG_4365.png" class="kitty-img" alt="kitty">
+  <img src="IMG_4357.png" class="kitty-img" alt="kitty">
   <h1>ถึง พี่เนมมี่คิตตี้หมุอ้วน</h1>
 
   <p>
