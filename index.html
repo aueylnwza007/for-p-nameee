@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ถึงพี่เนมมี่คิตตี้หมุอ้วน</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Kodchasan',sans-serif;
+  background:linear-gradient(180deg,#ffd6e8,#ffeaf3);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+.envelope{
+  background:#fff;
+  border-radius:26px;
+  padding:30px;
+  max-width:420px;
+  width:90%;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(255,105,180,.25);
+  position:absolute;
+}
+
+button{
+  background:#ff6fae;
+  border:none;
+  border-radius:999px;
+  padding:14px 26px;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.step{display:none;}
+
+h1{color:#ff5f9e;font-size:20px;}
+p{color:#444;line-height:1.9;font-size:15.5px;}
+
+.kitty-img{
+  width:120px;
+  animation:float 3s ease-in-out infinite;
+}
+
+.balloon{
+  position:absolute;
+  bottom:-100px;
+  font-size:40px;
+  animation:floatUp 8s linear infinite;
+  opacity:.7;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0);}
+}
+
+@keyframes floatUp{
+  from{transform:translateY(0);}
+  to{transform:translateY(-120vh);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ลูกโป่ง -->
+<div class="balloon" style="left:10%">🎈</div>
+<div class="balloon" style="left:50%;animation-delay:2s">🎈</div>
+<div class="balloon" style="left:80%;animation-delay:4s">🎈</div>
+
+<!-- STEP 1 -->
+<div class="envelope step" id="step1" style="display:block;">
+  <div style="font-size:60px;">💌</div>
+  <p>มีจดหมายถึงพี่เนมมี่คิตตี้หมุอ้วน</p>
+  <button onclick="nextStep(2)">แตะเพื่อรับจดหมาย</button>
+</div>
+
+<!-- STEP 2 -->
+<div class="envelope step" id="step2">
+  <img src="IMG_4357.png" class="kitty-img">
+  <p>ต้องยิ้มก่อนน้าาถึงจาเปิดด้ายยย</p>
+  <button onclick="nextStep(3)">ยิ้มแล้ว</button>
+</div>
+
+<!-- STEP 3 -->
+<div class="envelope step" id="step3">
+  <p>อยากเปิดอ้ะยังง</p>
+  <button onclick="nextStep(4)">พร้อมแล้ว</button>
+</div>
+
+<!-- STEP 4 -->
+<div class="envelope step" id="step4">
+  <h1>💗 3</h1>
+  <h1>2</h1>
+  <h1>1</h1>
+  <button onclick="nextStep(5)">เปิดจดหมาย</button>
+</div>
+
+<!-- STEP 5 : เนื้อจดหมาย -->
+<div class="envelope step" id="step5">
+  <img src="IMG_4357.png" class="kitty-img">
+  <h1>ถึง พี่เนมมี่คิตตี้หมุอ้วน</h1>
+
+  <p>
+  เค้าม่ายรู้ต้องทำยังไงให้พี่เนมดีขึ้นแบบจริงจริง  
+  แต่เค้าม่ายอยากให้พี่เนมรู้สึกว่าม่ายมีใครเข้าใจ  
+  เค้าม่ายอยากให้พี่เนมชินกับความรู้สึกม่ายดี  
+  เค้าอยากให้พี่เนมมีความสุข ยิ้มทู้กกกวัน  
+  กินของอร่อยอร่อยเย้อเย้อตลอด  
+  <br><br>
+  เค้าก้อพูดม่ายค่อยเก่ง แต่รักหมดใจนะ  
+  เค้าก้ออยู่ตรงนี้แหละ อยู่ข้างๆกับพี่เนม  
+  เค้าดีใจม้ากกกที่ตื่นมาแล้วเจอแชทพี่เนม  
+  เค้ามีความสุขที่ได้เฝ้าพี่เนมนอนเกือบทู้กวัน  
+  แล้วเค้าก้อชอบที่พี่เนมมีอะไรก้อเล่าให้เค้าฟัง  
+  เค้าชอบเสียงพี่เนมด้วย เสียงกีต้าร์พี่เนมเค้าก้อชอบ  
+  <br><br>
+  อยากได้กำลังใจก้อหันมาหาเค้าได้ตะเหมอ  
+  <br><br>
+  เค้าชอบพี่เนมที่สุดในโลกกกกกก
+  </p>
+</div>
+
+<script>
+function nextStep(n){
+  document.querySelectorAll('.step').forEach(s=>s.style.display='none');
+  document.getElementById('step'+n).style.display='block';
+}
+</script>
+
+</body>
+</html>
